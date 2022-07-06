@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+.App {
+  font-family: "Kumbh Sans", sans-serif;
+
+  @media screen and (min-width: 1220px) {
+    margin: 0px 80px;
+  }
+}
+
+:root {
+  --grayish-blue: hsl(220, 14%, 75%);
+  --dark-grayish-blue: hsl(219, 9%, 45%);
+  --light-grayish-blue: hsl(223, 64%, 98%);
+  --orange: hsl(26, 100%, 55%);
+  --pale-orange: hsl(25, 100%, 94%);
+}
+
+.main {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(100vh - 147px);
+  }
+
+  @media screen and (min-width: 1024px) {
+
+  }
+}

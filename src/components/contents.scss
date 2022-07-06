@@ -1,0 +1,133 @@
+.contents {
+  @media screen and (min-width: 768px) {
+    width: 40%;
+  }
+}
+
+.title-and-description {
+  margin: 0px 16px 32px;
+
+  h2 {
+    font-size: 16px;
+    color: var(--orange);
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 18px;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 42px;
+      margin-bottom: 30px;
+    }
+  }
+
+  p {
+    color: var(--dark-grayish-blue);
+    margin-bottom: 28px;
+
+    @media screen and (min-width: 1024px) {
+      line-height: 26px;
+    }
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+
+      h3 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-right: 16px;
+      }
+
+      h4 {
+        color: var(--orange);
+        background-color: var(--pale-orange);
+        border-radius: 4px;
+        max-width: max-content;
+        padding: 4px 6px;
+      }
+    }
+
+    h5 {
+      font-size: 16px;
+      color: var(--grayish-blue);
+      text-decoration: line-through;
+
+      @media screen and (min-width: 1024px) {
+        margin-top: 20px;
+        margin-bottom: 56px;
+      }
+    }
+  }
+}
+
+.counter-and-button {
+  margin: 0px 16px 36px;
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .counter {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-grayish-blue);
+    border-radius: 12px;
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 0px;
+      width: 40%;
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      padding: 26px 24px;
+    }
+
+    p {
+      font-weight: 700;
+    }
+  }
+
+  .add-to-cart-button {
+    background-color: var(--orange);
+    width: 100%;
+    padding: 22px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+
+    @media screen and (min-width: 1024px) {
+      width: 55%;
+    }
+
+    svg {
+      margin-right: 16px;
+    }
+  }
+
+  .add-to-cart-button:disabled {
+    background-color: hsl(26, 94%, 69%);
+    cursor: auto;
+  }
+}
