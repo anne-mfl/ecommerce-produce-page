@@ -9,7 +9,6 @@ import closeIcon from '../images/icon-close.svg'
 import deleteIcon from '../images/icon-delete.svg'
 import productImage from '../images/image-product-1-thumbnail.jpg'
 
-
 export default function Header({ quantity, setQuantity, addedToCart, setAddedToCart }) {
 
   const [openMobileMenu, setOpenMobileMenu] = useState(false)

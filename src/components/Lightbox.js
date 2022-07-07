@@ -6,13 +6,12 @@ import nextArrow from '../images/icon-next.svg'
 import previousArrowOrange from '../images/icon-previous-orange.svg'
 import nextArrowOrange from '../images/icon-next-orange.svg'
 
-
 export default function Lightbox({ setLightbox }) {
 
   const [imagePosition, setImagePosition] = useState(1)
   const [previousArrowHovered, setPreviousArrowHovered] = useState(false)
   const [nextArrowHovered, setNextArrowHovered] = useState(false)
-  
+
   const thumbnails = [1, 2, 3, 4]
 
   const handlePrevious = () => {
@@ -62,7 +61,6 @@ export default function Lightbox({ setLightbox }) {
               onMouseEnter={() => setPreviousArrowHovered(true)}
             />
           }
-
 
           <img
             alt='shoes'

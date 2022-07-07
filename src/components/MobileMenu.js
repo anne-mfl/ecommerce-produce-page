@@ -15,7 +15,6 @@ export default function MobileMenu({ openMobileMenu }) {
           <li><a href='/'>Contact</a></li>
         </ul>
 
-
         </div>
       </div>
     </section>

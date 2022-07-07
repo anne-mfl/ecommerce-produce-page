@@ -6,7 +6,6 @@ import Lightbox from './Lightbox'
 
 export default function MainImage() {
 
-
   const [imagePosition, setImagePosition] = useState(1)
   const [lightbox, setLightbox] = useState(false)
   const [windowSize, setWindowSize] = useState(0)
