@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './header.scss'
 import hamburgerIcon from '../images/icon-menu.svg'
-// import cartIcon from '../images/icon-cart.svg'
 import { ReactComponent as CartIcon } from '../images/icon-cart.svg'
 import avatarIcon from '../images/image-avatar.png'
 import logo from '../images/logo.svg'
@@ -69,10 +68,10 @@ export default function Header({ quantity, setQuantity, addedToCart, setAddedToC
                         </p>
                       </div>
                       <img
-                        onClick={() => (
-                          setQuantity(0),
+                        onClick={() => {
+                          setQuantity(0)
                           setAddedToCart(false)
-                        )}
+                        }}
                         src={deleteIcon}
                         alt='delete icon'
                       />

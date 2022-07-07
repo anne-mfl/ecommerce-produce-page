@@ -1,22 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import './product-image.scss'
 import previousArrow from '../images/icon-previous.svg'
 import nextArrow from '../images/icon-next.svg'
-import productImage1 from '../images/image-product-1.jpg'
-import productImage2 from '../images/image-product-2.jpg'
-import productImage3 from '../images/image-product-3.jpg'
-import productImage4 from '../images/image-product-4.jpg'
-
-// import productThumbnail1 from '../images/image-product-1-thumbnail.jpg'
-// import productThumbnail2 from '../images/image-product-2-thumbnail.jpg'
-// import productThumbnail3 from '../images/image-product-3-thumbnail.jpg'
-// import productThumbnail4 from '../images/image-product-4-thumbnail.jpg'
+import Lightbox from './Lightbox'
 
 export default function MainImage() {
 
-  const [imagePosition, setImagePosition] = useState(1)
 
+  const [imagePosition, setImagePosition] = useState(1)
+  const [lightbox, setLightbox] = useState(false)
+  const [windowSize, setWindowSize] = useState(0)
   const thumbnails = [1, 2, 3, 4]
+
+  useLayoutEffect(() => {
+    function updateSize() {
+      setWindowSize(window.innerWidth);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
 
   const handlePrevious = () => {
     if (imagePosition < 2) {
@@ -37,6 +40,8 @@ export default function MainImage() {
   return (
     <div className='carousel-wrapper'>
 
+      {lightbox && <Lightbox setLightbox={setLightbox} />}
+
       <div className='carousel'>
         <img
           src={previousArrow}
@@ -44,18 +49,12 @@ export default function MainImage() {
           onClick={handlePrevious}
         />
 
-        {imagePosition === 1 ?
-          <img src={productImage1} alt='shoes' className='main-image' />
-          :
-          imagePosition === 2 ?
-            <img src={productImage2} alt='shoes' className='main-image' />
-            :
-            imagePosition === 3 ?
-              <img src={productImage3} alt='shoes' className='main-image' />
-              :
-              // imagePosition === 4 ?
-              <img src={productImage4} alt='shoes' className='main-image' />
-        }
+        <img
+          alt='shoes'
+          className='main-image'
+          src={require('../images/image-product-' + imagePosition + '.jpg')}
+          onClick={() => windowSize >= 768 && setLightbox(true)}
+        />
 
         <img
           src={nextArrow}

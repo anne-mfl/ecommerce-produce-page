@@ -21,6 +21,7 @@
     svg {
       margin: 0px 10px;
       position: relative;
+      cursor: pointer;
     }
 
     > ul {
@@ -33,7 +34,6 @@
 
       > li {
         padding: 0px 12px;
-        // padding-bottom: 30px;
 
         &:hover {
           margin-bottom: -44px;
@@ -48,23 +48,26 @@
             color: black;
           }
         }
-
-
       }
     }
   }
 
   .avatar {
     height: 32px;
+    cursor: pointer;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 768px) {
       height: 46px;
       margin-left: 32px;
+
+      &:hover {
+        border: 3px solid var(--orange);
+        border-radius: 50%;
+        height: 40px;
+      }
     }
   }
 }
-
-
 
 .menu-icon {
   z-index: 30;
@@ -107,12 +110,12 @@
   border-radius: 8px;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 
-    @media screen and (min-width: 768px) {
-      width: 420px;
-      top: 110px;
-      left: auto;
-      right: 70px;
-    }
+  @media screen and (min-width: 768px) {
+    width: 420px;
+    top: 110px;
+    left: auto;
+    right: 70px;
+  }
 
   > h1 {
     font-size: 16px;
@@ -163,6 +166,7 @@
       border-radius: 6px;
       font-weight: 700;
       font-size: 16px;
+      cursor: pointer;
     }
   }
 
